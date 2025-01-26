@@ -40,7 +40,7 @@ Lets begin!
 
         .devcontainer/devcontainer.json
 
-This JSON file allows you to define the configuration for the development configuration.
+This JSON file allows you to define the configuration for the development configuration. Where we specify the following for the `devcontainer.json`:
 
     {
         "name": "go-project",
@@ -53,3 +53,30 @@ This JSON file allows you to define the configuration for the development config
         },
         "postCreateCommand": "go mod download"
     }
+
+### Step 2: Creating module file
+
+The next file we want to create is the `go.mod` file, this file defines the project's dependencies and is crucial to any Go project!
+
+First, we want to run the command 
+
+    go mod init <directory>
+
+To initialize the go module within the root directory. In this case, we would run `go mod init go-project`!
+Having completed this, we can go ahead and move on to the next step as we do not have any particular dependencies to add.
+
+### Step 3: Reopen the Project in a VSCode Dev Container
+
+This will initiate everything and allow us to use our Dev Container. To do this press `Cmd+Shift+P` (or `Control+Shift+P` on Windows) or you can press the search bar on the top middle of VSCode.
+Then you want to type in "Dev Containers: Reopen in Container" to allow for the the Dev Container to be created. 
+
+After this is done, in your terminal run: `go version` and something similar should pop up:
+
+    vscode ➜ /workspaces/go-project $ go version 
+    go1.23.4 linux/arm64
+
+As a side note, this was created Jan 2025.
+
+## Part 3: Creating Hello World in Go
+
+

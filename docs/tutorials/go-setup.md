@@ -29,7 +29,7 @@ Next, lets create a README file by using the following commands:
     echo "# Go Project" >> README.md
     echo "[Tutorial](https://yuanyaolin13.github.io/comp423-course-notes/tutorials/go-setup/)" >> README.md
     git add README.md
-    git commit -m "Initial commit: added README.md
+    git commit -m "Initial commit: added README.md"
 
 !!! note 
     The second `echo` command will link to this tutorial!
@@ -43,7 +43,6 @@ Next, you can go ahead and fill in the required things with:
 - Repository Name: go-project
 - Description: "Hello COMP423 with Golang"
 - Visibility: Public
-
 
 Do **NOT** initialize the repository with a README, .gitignore, or license. And then click Create Repository.
 
@@ -92,13 +91,18 @@ This JSON file allows you to define the configuration for the development config
         "postCreateCommand": "go mod download"
     }
 
+
+!!! tip
+
+    If you have done this before, do **NOT** build just yet! We will get into that step after we create our `go.mod` file!
+
 ### Step 2: Creating module file
 
 The next file we want to create is the `go.mod` file, this file defines the project's dependencies and is crucial to any Go project!
 
 First, we want to run the command 
 
-    go mod init <directory>
+    go mod init go-project
 
 To initialize the go module within the root directory. In this case, we would run `go mod init go-project`!
 Having completed this, we can go ahead and move on to the next step as we do not have any particular dependencies to add.

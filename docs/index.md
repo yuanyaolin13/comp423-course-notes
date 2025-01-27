@@ -10,3 +10,6 @@ def bubble_sort(items):
                 if items[j] > items[j + 1]:
                     items[j], items[j + 1] = items[j + 1], items[j]
 ```
+
+!!! note "This is a note admonition"
+    go to this [website](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) for other types of admonitions

@@ -22,7 +22,45 @@ In this tutorial, I will name the directory `go-project`, but feel free to name 
 
 Then we can initialize Git in this folder by using this git subcommand in our directory:
 
-    git init 
+    git init
+
+Next, lets create a README file by using the following commands:
+
+    echo "# Go Project" >> README.md
+    echo "[Tutorial](https://yuanyaolin13.github.io/comp423-course-notes/tutorials/go-setup/)" >> README.md
+    git add README.md
+    git commit -m "Initial commit: added README.md
+
+!!! note 
+    The second `echo` command will link to this tutorial!
+
+## Step 2: Publishing Remote Repo on GitHub
+
+First, you want to login into your GitHub account then [create a new repo](https://github.com/new)
+
+Next, you can go ahead and fill in the required things with:
+
+- Repository Name: go-project
+- Description: "Hello COMP423 with Golang"
+- Visibility: Public
+
+
+Do **NOT** initialize the repository with a README, .gitignore, or license. And then click Create Repository.
+
+## Step 3: Linking Local Repo on GitHub
+
+Then, you want to add GitHub repo as a remote: 
+
+    git remote add origin https://github.com/<your-username>/go-project.git
+
+Next, go ahead and make main the default branch name. 
+
+Finally, push your local commits onto GitHub 
+
+    git push --set-upstream origin main
+
+Refreshing will net you your new commits on GitHub!
+
 
 ## Part 2: Instructions for creating a new Dev Container for Go
 
@@ -112,6 +150,14 @@ Then we can choose two options, either we:
         go.mod  main  main.go
         
         vscode ➜ /workspaces/test $ 
+
+## Part 4: Pushing your work onto GitHub
+
+We have finished and now you can push your work onto GitHub!! Following these commands:
+
+    git add -A
+    git commit -m "followed Golang tutorial and printed Hello COMP423!"
+    git push -u origin main
 
 ## Conclusion
 

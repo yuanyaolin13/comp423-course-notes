@@ -92,22 +92,8 @@ This JSON file allows you to define the configuration for the development config
     }
 
 
-!!! tip
 
-    If you have done this before, do **NOT** build just yet! We will get into that step after we create our `go.mod` file!
-
-### Step 2: Creating module file
-
-The next file we want to create is the `go.mod` file, this file defines the project's dependencies and is crucial to any Go project!
-
-First, we want to run the command 
-
-    go mod init go-project
-
-To initialize the go module within the root directory. In this case, we would run `go mod init go-project`!
-Having completed this, we can go ahead and move on to the next step as we do not have any particular dependencies to add.
-
-### Step 3: Reopen the Project in a VSCode Dev Container
+### Step 2: Reopen the Project in a VSCode Dev Container
 
 This will initiate everything and allow us to use our Dev Container. To do this press `Cmd+Shift+P` (or `Control+Shift+P` on Windows) or you can press the search bar on the top middle of VSCode.
 Then you want to type in "Dev Containers: Reopen in Container" to allow for the the Dev Container to be created. 
@@ -120,6 +106,17 @@ After this is done, in your terminal run: `go version` and something similar sho
 !!! note
     
     This version is current as of Jan 2025.
+
+### Step 3: Creating module file
+
+The next file we want to create is the `go.mod` file, this file defines the project's dependencies and is crucial to any Go project!
+
+We want to run the command 
+
+    go mod init go-project
+
+To initialize the go module within the root directory. In this case, we would run `go mod init go-project`!
+Having completed this, we can go ahead and move on to the next step as we do not have any particular dependencies to add.
 
 ## Part 3: Creating "Hello COMP423" in Go
 
@@ -147,13 +144,16 @@ Then we can choose two options, either we:
         Hello COMP423
 
 !!! note "What `go build` will get us: "
-        vscode ➜ /workspaces/test $ go build main.go
+        vscode ➜ /workspaces/go-project $ go build main.go
 
-        vscode ➜ /workspaces/test $ ls
+        vscode ➜ /workspaces/go-project $ ls
 
         go.mod  main  main.go
         
-        vscode ➜ /workspaces/test $ 
+        vscode ➜ /workspaces/go-project $ 
+
+        vscode ➜ /workspaces/go-project (main) $ ./main
+        Hello COMP423
 
 ## Part 4: Pushing your work onto GitHub
 

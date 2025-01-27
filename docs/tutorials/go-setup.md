@@ -74,20 +74,45 @@ After this is done, in your terminal run: `go version` and something similar sho
 
     vscode ➜ /workspaces/go-project $ go version 
     go1.23.4 linux/arm64
+ 
+!!! note
+    
+    This version is current as of Jan 2025.
 
-As a side note, this was created Jan 2025.
+## Part 3: Creating "Hello COMP423" in Go
 
-## Part 3: Creating Hello World in Go
+First we want to create the Go file, you can achieve this by using the `.go` extension when creating a new file. For this case, my file will be named `main.go`
 
+Next, we can use can type this up in the Go file to create our "Hello COMP423" program,
 
-## TEST
-``` py linenums="1"
-def bubble_sort(items):
-        for i in range(len(items)):
-            for j in range(len(items) - 1 - i):
-                if items[j] > items[j + 1]:
-                    items[j], items[j + 1] = items[j + 1], items[j]
+``` go
+    package main
+    import "fmt"
+
+    func main() {
+        fmt.Println("Hello COMP423")
+    }
 ```
 
-!!! note "This is a note admonition"
-    go to this [website](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) for other types of admonitions
+Then we can choose two options, either we:
+
+1. `go run <file>`   -> simply runs the the program within the terminal
+2. `go build <file>` -> creates the executable for a Go file and binary
+
+!!! note "What `go run` will get us: "
+        vscode ➜ /workspaces/test $ go run main.go
+
+        Hello COMP423
+
+!!! note "What `go build` will get us: "
+        vscode ➜ /workspaces/test $ go build main.go
+
+        vscode ➜ /workspaces/test $ ls
+
+        go.mod  main  main.go
+        
+        vscode ➜ /workspaces/test $ 
+
+## Conclusion
+
+Congratulations, you have built your first Go project and you have successfully set up an environment for the rest of your Go needs!!
